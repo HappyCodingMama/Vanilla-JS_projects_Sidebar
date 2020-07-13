@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    line-height: 1.5;
+    background-color: #c7ecee;
+}
+
+.logo {
+    justify-self: center;
+    height: 36px;
+    margin: 10px;
+    padding: .4rem 0.5rem;
+}
+
+.logo h1{
+    font-family: 'Dosis', sans-serif;
+        font-size: 1.3rem;
+        text-transform:  uppercase;
+        color: black;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.sidebar-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    color: #60a3bc;
+    cursor: pointer;
+    transition: .3s ease transform;
+    outline: none;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.sidebar-toggle:hover {
+    color: #ff4d4d;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    color: #aaaaaa;
+    cursor: pointer;
+    outline: none;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+}
+
+.close-btn:hover {
+    color: #ff4d4d;
+}
+
+.links a {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    color: #aaaaaa;
+    transition: .3s ease;
+}
+.links a:hover {
+    background: #f1f2f6;
+    color: #ff4d4d;
+    padding-left: 1.75rem;
+}
+
+.social-icons {
+    justify-self: center;
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.social-icons a {
+    margin: 0 0.3rem;
+    color: #60a3bc;
+
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: 0 0 15px #aaaaaa;
+    transition: .5s ease;
+    transform: translate(-100%);
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+@media screen and (min-width: 676px) {
+    .sidebar {
+        width: 400px;
+    }
+}
